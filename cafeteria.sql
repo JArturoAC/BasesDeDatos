@@ -3,7 +3,10 @@ CREATE TABLE productos(
   NombreProducto VARCHAR (20),
   PrecioProducto FLOAT (2),
   Disponible BOOL
-);
+  );
+
+#Llenamos la lista de productos
+
 INSERT INTO productos
 VALUES (1, "Manzana", 0.20 , True);
 INSERT INTO productos
@@ -19,6 +22,12 @@ VALUES (6, "Papaya", 0.67 , True);
 INSERT INTO productos
 VALUES (7, "Arroz con curry", 10 , False);
 
+#Muestra los productos que hay que comprar
 
 SELECT NombreProducto FROM productos
 WHERE Disponible = False;
+
+#Muestra la carta
+
+SELECT NombreProducto, PrecioProducto FROM productos
+WHERE Disponible = True;
